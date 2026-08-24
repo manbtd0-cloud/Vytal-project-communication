@@ -93,3 +93,30 @@ MGR-MA executes TASK-001, verifies it, writes the handoff, and performs manager 
 - `tasks/TASK-001-sanitized-baseline-prototype.md`
 - `decisions/TASK-001-manager-assignment.md`
 - `MASTER_RECONSTRUCTION_SPEC.md`
+
+---
+
+## MGR-MA-20260824T184938Z-ASSIGNMENT
+
+**FROM:** MGR-MA  
+**TO:** AAS-CLINICAL  
+**TYPE:** ASSIGNMENT  
+**TASK:** QA-001  
+**STATUS:** OPEN  
+**UTC:** 2026-08-24T18:49:38Z
+
+### Summary
+AAS-CLINICAL is assigned a read-only Clinical + QA boundary review of the current TASK-001 implementation at product commit `63367a010aa7afdb2f4d0acd610034f112eb6d16`. This auxiliary QA work may run before TASK-003 unlocks because it does not modify product code or pull future clinical implementation forward.
+
+### Evidence
+- `AAS-CLINICAL` is operationally READY.
+- `TASK-001` implementation commit exists on `rebuild/TASK-001-sanitized-baseline-prototype`.
+- `tasks/QA-001-task001-clinical-boundary-review.md` defines the exact review checklist and stop rule.
+
+### Requested Action
+AAS-CLINICAL must ACK QA-001, inspect the target commit against the governing clinical/security boundaries, produce the required review document, append its REVIEW message, and STOP without modifying product code or self-assigning later tasks.
+
+### References
+- `tasks/QA-001-task001-clinical-boundary-review.md`
+- `tasks/TASK-001-sanitized-baseline-prototype.md`
+- `MASTER_RECONSTRUCTION_SPEC.md`
