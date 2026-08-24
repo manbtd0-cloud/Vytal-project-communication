@@ -18,7 +18,7 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 
 | Task | Workstream | Owner | Depends on | Status |
 |---|---|---|---|---|
-| TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | ASSIGNED |
+| TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | IN_PROGRESS |
 | TASK-002 App shell/scanner stabilization | Frontend | Agent A | 001 | PLANNED |
 | TASK-003 POS/CHROM hybrid rPPG | Clinical | AAS-CLINICAL | 002 | PLANNED |
 | TASK-004 Pulse variability/SNR/timing | Clinical | AAS-CLINICAL | 003 | PLANNED |
@@ -52,7 +52,7 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 
 ## Immediate queue
 
-`TASK-001` is currently ASSIGNED to `MGR-MA` for manager-side Scanner / Frontend execution.
+`TASK-001` is currently IN_PROGRESS under `MGR-MA` on product branch `rebuild/TASK-001-sanitized-baseline-prototype`.
 
 `AAS-CLINICAL` is READY and waiting for the clinical dependency chain to unlock. `LAIBA-BE` remains unavailable until onboarding is complete.
 
