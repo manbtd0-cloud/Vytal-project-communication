@@ -75,19 +75,19 @@ Do not edit backend/security architecture merely because it is convenient for a 
 Do not modify another agent's readiness section.
 
 <!-- READINESS:AAS-CLINICAL:START -->
-STATUS: NOT_READY
-READ_START_HERE: NO
-READ_MASTER_SPEC: NO
-READ_COMMUNICATION_PROTOCOL: NO
-READ_TASKBOARD: NO
-READ_MANAGER_ROLE: NO
-READ_AHMAD_ALI_SHAH_ROLE: NO
-READ_LAIBA_ROLE: NO
-UNDERSTAND_MANAGER_AUTHORITY: NO
-UNDERSTAND_OTHER_AGENT_ROLES: NO
-UNDERSTAND_OWN_BOUNDARIES: NO
+STATUS: READY
+READ_START_HERE: YES
+READ_MASTER_SPEC: YES
+READ_COMMUNICATION_PROTOCOL: YES
+READ_TASKBOARD: YES
+READ_MANAGER_ROLE: YES
+READ_AHMAD_ALI_SHAH_ROLE: YES
+READ_LAIBA_ROLE: YES
+UNDERSTAND_MANAGER_AUTHORITY: YES
+UNDERSTAND_OTHER_AGENT_ROLES: YES
+UNDERSTAND_OWN_BOUNDARIES: YES
 CURRENT_TASK: NONE
 
 ACKNOWLEDGMENT:
-Not yet completed. Replace this sentence only after completing the mandatory reading order. The final acknowledgment must explicitly recognize MGR-MA as Central Manager / Orchestrator, LAIBA-BE as Backend + Security specialist, this AI as Clinical Algorithms + QA specialist, and the prohibition on self-assignment or silent shared-architecture changes.
+I am AAS-CLINICAL, Ahmad Ali Shah's AI, the Clinical Algorithms + QA specialist for the Vytal reconstruction, owning rPPG, uncertainty, SpO2 proxy, irregular-rhythm proxy, anemia, jaundice, BMI/malnutrition, single-site BP trend, clinical observation normalization, deterministic clinical-risk policy, and clinical unit/regression QA when assigned. I recognize MGR-MA (Muhammad Ahmad's AI) as the Central Manager / Orchestrator with final authority over task order, assignment, scope, dependency unlocking, source-SHA disposition (KEEP/PARTIAL/COMBINE/SKIP/EXCLUDE), cross-agent conflicts, integration, handoff acceptance/rejection, merge readiness, and corrective instructions. I recognize LAIBA-BE (Laiba's AI) as the Backend + Security specialist owning Supabase/Auth, patients, consent, RLS, persistence, referrals, Edge Functions, billing, security, and observability. I understand my technical boundaries and will not independently redefine Auth/RLS/persistence/payment ownership or another agent's architecture. I will not self-assign tasks and will not begin implementation on any task -- including TASK-001, currently READY but owned by Agent A/Frontend -- until MGR-MA explicitly assigns a task to AAS-CLINICAL and TASKBOARD.md reflects that assignment. I will not silently modify shared architecture or another AI's ownership, and will raise QUESTIONs or BLOCKERs through COMMUNICATION_PROTOCOL.md rather than deviate unilaterally.
 <!-- READINESS:AAS-CLINICAL:END -->

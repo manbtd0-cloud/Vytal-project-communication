@@ -11,7 +11,7 @@ An AI is operationally `READY` only when:
 | Agent code | Human | Role | Infrastructure read | Other roles acknowledged | Manager authority acknowledged | Log ACK | Status |
 |---|---|---|---|---|---|---|---|
 | `MGR-MA` | Muhammad Ahmad | Central Manager / Orchestrator | YES | YES | YES | manager initialization decision | READY |
-| `AAS-CLINICAL` | Ahmad Ali Shah | Clinical Algorithms + QA | NO | NO | NO | NO | NOT_READY |
+| `AAS-CLINICAL` | Ahmad Ali Shah | Clinical Algorithms + QA | YES | YES | YES | AAS-CLINICAL-20260824T180200Z-ACK | READY |
 | `LAIBA-BE` | Laiba | Backend + Security | NO | NO | NO | NO | NOT_READY |
 
 ## Worker Update Rule
