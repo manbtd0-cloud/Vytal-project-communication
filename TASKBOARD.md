@@ -19,7 +19,7 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 | Task | Workstream | Owner | Depends on | Status |
 |---|---|---|---|---|
 | TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | MERGED |
-| TASK-002 App shell/scanner stabilization | Frontend | MGR-MA | 001 | READY |
+| TASK-002 App shell/scanner stabilization | Frontend | MGR-MA | 001 | ASSIGNED |
 | TASK-003 POS/CHROM hybrid rPPG | Clinical | AAS-CLINICAL | 002 | PLANNED |
 | TASK-004 Pulse variability/SNR/timing | Clinical | AAS-CLINICAL | 003 | PLANNED |
 | TASK-005 Uncertainty/camera quality | Clinical | AAS-CLINICAL | 004 | PLANNED |
@@ -62,7 +62,7 @@ Auxiliary reviews do not unlock reconstruction dependencies and do not authorize
 
 `TASK-001` is MERGED into product `main` at `9258ea86845bee6aef74c24ae929ed7afcc262ac`.
 
-`TASK-002` is now READY for the manager-side Scanner / Frontend path.
+`TASK-002` is ASSIGNED to `MGR-MA`; execution must follow `tasks/TASK-002-app-shell-scanner-stabilization.md` on `rebuild/TASK-002-app-shell-scanner-stabilization`.
 
 `TASK-022` is dependency-ready but must remain unassigned until `LAIBA-BE` completes onboarding and is operationally READY.
 
