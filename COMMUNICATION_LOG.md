@@ -204,3 +204,30 @@ MGR-MA prepares/assigns TASK-002. AAS-CLINICAL executes QA-001 only. LAIBA-BE re
 - `tasks/QA-001-task001-clinical-boundary-review.md`
 - `handoffs/TASK-001-handoff.md`
 - `reviews/TASK-001-REVIEW.md`
+
+---
+
+## MGR-MA-20260824T190600Z-ASSIGNMENT
+
+**FROM:** MGR-MA  
+**TO:** MGR-MA  
+**TYPE:** ASSIGNMENT  
+**TASK:** TASK-002  
+**STATUS:** OPEN  
+**UTC:** 2026-08-24T19:06:00Z
+
+### Summary
+MGR-MA assigns TASK-002 to itself for app-shell and early scanner stabilization. The task uses curated partial dispositions from `5b01ab33`, `73874939`, `2fb62e7a`, and the UI-only clipping hunk of `4bdb1927`; provider configuration, API-key UI, clinical/referral changes, and signal-pipeline changes are explicitly excluded.
+
+### Evidence
+- `TASK-001` is MERGED at product `main@9258ea86845bee6aef74c24ae929ed7afcc262ac`.
+- `TASKBOARD.md` marks TASK-002 ASSIGNED to MGR-MA.
+- `tasks/TASK-002-app-shell-scanner-stabilization.md` defines exact source disposition, TDD contract, and acceptance criteria.
+
+### Requested Action
+MGR-MA executes TASK-002 on `rebuild/TASK-002-app-shell-scanner-stabilization`, verifies it, writes a handoff, and performs manager review before merge. AAS-CLINICAL continues only QA-001 until TASK-003 unlocks.
+
+### References
+- `tasks/TASK-002-app-shell-scanner-stabilization.md`
+- `MASTER_RECONSTRUCTION_SPEC.md`
+- `TASKBOARD.md`
