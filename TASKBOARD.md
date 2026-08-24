@@ -50,11 +50,21 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 | TASK-030 Final scanner/auth/clinical/security corrections | Integration | MGR-MA + AAS-CLINICAL + LAIBA-BE | 029 | PLANNED |
 | TASK-031 Final docs/release gate | Release | MGR-MA + AAS-CLINICAL + LAIBA-BE | 030 | PLANNED |
 
+## Auxiliary QA / Review Work
+
+Auxiliary reviews do not unlock reconstruction dependencies and do not authorize early implementation of later tasks.
+
+| Review | Target | Owner | Status |
+|---|---|---|---|
+| QA-001 TASK-001 clinical boundary review | `Project-Vytal-@63367a0` | AAS-CLINICAL | ASSIGNED |
+
 ## Immediate queue
 
 `TASK-001` is currently IN_PROGRESS under `MGR-MA` on product branch `rebuild/TASK-001-sanitized-baseline-prototype`.
 
-`AAS-CLINICAL` is READY and waiting for the clinical dependency chain to unlock. `LAIBA-BE` remains unavailable until onboarding is complete.
+`QA-001` is ASSIGNED to `AAS-CLINICAL` for read-only clinical/safety QA of the TASK-001 implementation commit.
+
+`LAIBA-BE` remains unavailable until onboarding is complete.
 
 Once TASK-001 is MERGED:
 - TASK-002 becomes READY.
