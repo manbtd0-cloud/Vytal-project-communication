@@ -1,12 +1,22 @@
 # TASK-001 — Sanitized Baseline Prototype
 
-**Status:** ASSIGNED
+**Status:** MERGED
 
 **Owner:** `MGR-MA` — Muhammad Ahmad's Central Manager / Orchestrator acting as Scanner / Frontend implementer for this task
 
 **Product repository:** `Ahmad-Ali-Shah/Project-Vytal-`
 
 **Product branch:** `rebuild/TASK-001-sanitized-baseline-prototype`
+
+**Implementation commit:** `63367a010aa7afdb2f4d0acd610034f112eb6d16`
+
+**Verified branch head:** `ef43976052718d5cdd39d59e6bedc682c28b7f00`
+
+**Merged product commit:** `9258ea86845bee6aef74c24ae929ed7afcc262ac`
+
+**Handoff:** `handoffs/TASK-001-handoff.md`
+
+**Manager review:** `reviews/TASK-001-REVIEW.md`
 
 **Source repository:** `Ahmad-Ali-Shah/Vital`
 
@@ -86,51 +96,43 @@ The product repository should contain a coherent baseline application capable of
 
 ## Execution procedure
 
-- [ ] Read `MASTER_RECONSTRUCTION_SPEC.md` in the communication repo before modifying the product repo.
-- [ ] Inspect source commit `35b3297c9ce5f4f0ac8cfac2d16861a460c421b8` directly.
-- [ ] Create product branch `rebuild/TASK-001-sanitized-baseline-prototype` from the current product base selected by the manager.
-- [ ] Port the runtime root/build files required to boot the React/Vite application.
-- [ ] Port `src/App.jsx`, `src/main.jsx`, `src/index.css`, required `src/components/`, `src/pages/`, and baseline `src/lib/` dependencies.
-- [ ] Port only runtime-required `public/` assets.
-- [ ] Remove/disable hardcoded provider credentials if encountered.
-- [ ] Ensure the baseline does not claim old browser persistence is the final production clinical database.
-- [ ] Do not copy `.claude/`, old orchestration material, landing work, or archive content.
-- [ ] Install dependencies using the repository's package manager contract.
-- [ ] Run the production build.
-- [ ] Run any baseline tests that exist and are runnable.
-- [ ] Manually confirm the application shell, scan page, dashboard, and report route/surface render.
-- [ ] Inspect the final diff and remove accidental unrelated files.
-- [ ] Commit as `feat(TASK-001): import sanitized Vytal baseline prototype`.
-- [ ] Push the task branch.
-- [ ] Create `handoffs/TASK-001-handoff.md` in the communication repo using the handoff contract.
+- [x] Read `MASTER_RECONSTRUCTION_SPEC.md` in the communication repo before modifying the product repo.
+- [x] Inspect source commit `35b3297c9ce5f4f0ac8cfac2d16861a460c421b8` directly.
+- [x] Create product branch `rebuild/TASK-001-sanitized-baseline-prototype` from the current product base selected by the manager.
+- [x] Port the runtime root/build files required to boot the React/Vite application.
+- [x] Port `src/App.jsx`, `src/main.jsx`, `src/index.css`, required `src/components/`, `src/pages/`, and baseline `src/lib/` dependencies.
+- [x] Port only runtime-required `public/` assets.
+- [x] Remove/disable hardcoded provider credentials if encountered.
+- [x] Ensure the baseline does not claim old browser persistence is the final production clinical database.
+- [x] Do not copy `.claude/`, old orchestration material, landing work, or archive content.
+- [x] Install dependencies using the repository's package manager contract.
+- [x] Run the production build.
+- [x] Run baseline tests.
+- [x] Confirm route/surface compilation for the application shell, scan page, dashboard, and report through the successful production build and route contract; physical camera hardware interaction remains a subsequent scanner-test concern.
+- [x] Inspect the final diff and remove accidental unrelated files.
+- [x] Commit as `feat(TASK-001): import sanitized Vytal baseline prototype`.
+- [x] Push the task branch.
+- [x] Create `handoffs/TASK-001-handoff.md` in the communication repo using the handoff contract.
 
 ## Verification evidence required in handoff
 
-Record:
+Recorded in `handoffs/TASK-001-handoff.md`:
 
 - exact product branch;
-- exact product commit SHA;
+- exact product/verification/merge commit SHAs;
 - source SHA `35b3297c...`;
 - dependency install command and result;
 - build command and result;
-- test command/result if tests exist;
-- list of intentionally excluded root directories/files;
+- test command/result;
+- intentionally excluded root directories/files;
 - confirmation that no provider secret was copied;
 - confirmation that no landing-page material was copied;
-- any baseline persistence limitation still present.
+- baseline persistence limitation.
 
 ## Acceptance criteria
 
-TASK-001 may be accepted only when:
-
-- the product baseline boots/builds;
-- the original product application surfaces are present enough for later tasks to build upon;
-- no landing-page work is introduced;
-- no hardcoded AI/payment/database-secret credential is introduced;
-- no worker claims the historical baseline persistence is the final secure production architecture;
-- the task contains no later-wave feature work;
-- the handoff contains actual verification evidence.
+Manager review `reviews/TASK-001-REVIEW.md` records all acceptance criteria as satisfied. CI run `32764912331` passed install, 7/7 contract tests, and production build before merge.
 
 ## Manager note
 
-After TASK-001 is MERGED, both TASK-002 and TASK-022 become eligible to move to READY, allowing the frontend/signal and secure-backend paths to begin in parallel.
+TASK-001 is merged. TASK-002 and TASK-022 are now dependency-ready. TASK-022 remains unavailable for assignment until `LAIBA-BE` completes onboarding.

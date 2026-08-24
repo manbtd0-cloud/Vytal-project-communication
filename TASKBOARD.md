@@ -18,8 +18,8 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 
 | Task | Workstream | Owner | Depends on | Status |
 |---|---|---|---|---|
-| TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | IN_PROGRESS |
-| TASK-002 App shell/scanner stabilization | Frontend | Agent A | 001 | PLANNED |
+| TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | MERGED |
+| TASK-002 App shell/scanner stabilization | Frontend | MGR-MA | 001 | READY |
 | TASK-003 POS/CHROM hybrid rPPG | Clinical | AAS-CLINICAL | 002 | PLANNED |
 | TASK-004 Pulse variability/SNR/timing | Clinical | AAS-CLINICAL | 003 | PLANNED |
 | TASK-005 Uncertainty/camera quality | Clinical | AAS-CLINICAL | 004 | PLANNED |
@@ -36,17 +36,17 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 | TASK-016 Single-site BP crest-time trend | Clinical | AAS-CLINICAL | 009 | PLANNED |
 | TASK-017 Capability-gated device helpers | Clinical | AAS-CLINICAL | 009 | PLANNED |
 | TASK-018 Clinical integrity correction | Clinical | AAS-CLINICAL | 010–017 | PLANNED |
-| TASK-019 Capture reliability/specialized guides | Frontend | Agent A | 018 | PLANNED |
+| TASK-019 Capture reliability/specialized guides | Frontend | MGR-MA | 018 | PLANNED |
 | TASK-020 Algorithm refinement pass | Clinical | AAS-CLINICAL | 019 | PLANNED |
-| TASK-021 Apple Health product redesign | Frontend | Agent A | 002 | PLANNED |
-| TASK-022 Supabase/Auth foundation | Backend | LAIBA-BE | 001 | PLANNED |
+| TASK-021 Apple Health product redesign | Frontend | MGR-MA | 002 | PLANNED |
+| TASK-022 Supabase/Auth foundation | Backend | LAIBA-BE | 001 | READY |
 | TASK-023 Patients/consent/ownership/RLS | Backend | LAIBA-BE | 022 | PLANNED |
 | TASK-024 Transactional screening/referral/audit | Backend | LAIBA-BE | 023 | PLANNED |
 | TASK-025 Server-side AI explanation | Backend | LAIBA-BE | 022 | PLANNED |
 | TASK-026 Stripe billing/donations | Backend | LAIBA-BE | 023 | PLANNED |
 | TASK-027 Performance/observability/DB verification | Backend | LAIBA-BE | 024,025,026 | PLANNED |
 | TASK-028 Baby-boss reconciliation | Integration | MGR-MA + AAS-CLINICAL + LAIBA-BE | 020,021,027 | PLANNED |
-| TASK-029 Camera compatibility/specialized capture | Frontend | Agent A | 028 | PLANNED |
+| TASK-029 Camera compatibility/specialized capture | Frontend | MGR-MA | 028 | PLANNED |
 | TASK-030 Final scanner/auth/clinical/security corrections | Integration | MGR-MA + AAS-CLINICAL + LAIBA-BE | 029 | PLANNED |
 | TASK-031 Final docs/release gate | Release | MGR-MA + AAS-CLINICAL + LAIBA-BE | 030 | PLANNED |
 
@@ -60,14 +60,12 @@ Auxiliary reviews do not unlock reconstruction dependencies and do not authorize
 
 ## Immediate queue
 
-`TASK-001` is currently IN_PROGRESS under `MGR-MA` on product branch `rebuild/TASK-001-sanitized-baseline-prototype`.
+`TASK-001` is MERGED into product `main` at `9258ea86845bee6aef74c24ae929ed7afcc262ac`.
 
-`QA-001` is ASSIGNED to `AAS-CLINICAL` for read-only clinical/safety QA of the TASK-001 implementation commit.
+`TASK-002` is now READY for the manager-side Scanner / Frontend path.
 
-`LAIBA-BE` remains unavailable until onboarding is complete.
+`TASK-022` is dependency-ready but must remain unassigned until `LAIBA-BE` completes onboarding and is operationally READY.
 
-Once TASK-001 is MERGED:
-- TASK-002 becomes READY.
-- TASK-022 becomes READY, but it may only be assigned when `LAIBA-BE` is operationally READY.
+`QA-001` remains ASSIGNED to `AAS-CLINICAL` for read-only clinical/safety QA of the TASK-001 implementation commit. It does not block TASK-002.
 
 The manager is the only actor allowed to change dependency order or mark a task READY outside these rules.

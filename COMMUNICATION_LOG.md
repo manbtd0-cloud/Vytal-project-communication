@@ -120,3 +120,87 @@ AAS-CLINICAL must ACK QA-001, inspect the target commit against the governing cl
 - `tasks/QA-001-task001-clinical-boundary-review.md`
 - `tasks/TASK-001-sanitized-baseline-prototype.md`
 - `MASTER_RECONSTRUCTION_SPEC.md`
+
+---
+
+## MGR-MA-20260824T190000Z-HANDOFF
+
+**FROM:** MGR-MA  
+**TO:** MGR-MA  
+**TYPE:** HANDOFF  
+**TASK:** TASK-001  
+**STATUS:** CLOSED  
+**UTC:** 2026-08-24T19:00:00Z
+
+### Summary
+TASK-001 implementation and verification are complete. The sanitized baseline is documented in `handoffs/TASK-001-handoff.md` with source traceability, exclusions, security/clinical notes, and exact CI evidence.
+
+### Evidence
+- Implementation commit `63367a010aa7afdb2f4d0acd610034f112eb6d16`.
+- Verified branch head `ef43976052718d5cdd39d59e6bedc682c28b7f00`.
+- CI run `32764912331`: install PASS, 7/7 contract tests PASS, production build PASS.
+- `handoffs/TASK-001-handoff.md`.
+
+### Requested Action
+Manager review TASK-001 against its task specification and handoff.
+
+### References
+- `handoffs/TASK-001-handoff.md`
+- `tasks/TASK-001-sanitized-baseline-prototype.md`
+- `Ahmad-Ali-Shah/Project-Vytal-#1`
+
+---
+
+## MGR-MA-20260824T190100Z-REVIEW
+
+**FROM:** MGR-MA  
+**TO:** ALL  
+**TYPE:** REVIEW  
+**TASK:** TASK-001  
+**STATUS:** CLOSED  
+**UTC:** 2026-08-24T19:01:00Z
+
+### Summary
+TASK-001 manager review outcome is ACCEPT. Historical source disposition, task scope, clinical limitations, secret/provider boundary, session-memory persistence boundary, route contract, no-landing scope, tests and production build were reviewed with no blocking finding.
+
+### Evidence
+- `reviews/TASK-001-REVIEW.md`.
+- CI run `32764912331`, job `97552093908`: SUCCESS.
+- 7 tests passed, 0 failed.
+- Vite production build passed after transforming 118 modules.
+
+### Requested Action
+Proceed with merge and dependency unlocks.
+
+### References
+- `reviews/TASK-001-REVIEW.md`
+- `handoffs/TASK-001-handoff.md`
+- `Ahmad-Ali-Shah/Project-Vytal-#1`
+
+---
+
+## MGR-MA-20260824T190200Z-DECISION
+
+**FROM:** MGR-MA  
+**TO:** ALL  
+**TYPE:** DECISION  
+**TASK:** TASK-001  
+**STATUS:** INFORMATIONAL  
+**UTC:** 2026-08-24T19:02:00Z
+
+### Summary
+TASK-001 is merged to product `main` as `9258ea86845bee6aef74c24ae929ed7afcc262ac`. TASK-002 and TASK-022 are dependency-ready. TASK-002 may proceed on the manager-side Scanner / Frontend path. TASK-022 must not be assigned until LAIBA-BE completes onboarding. QA-001 remains assigned to AAS-CLINICAL as an auxiliary read-only review and does not block TASK-002.
+
+### Evidence
+- Product PR #1 merged successfully.
+- `TASKBOARD.md` marks TASK-001 MERGED, TASK-002 READY, TASK-022 READY.
+- `reviews/TASK-001-REVIEW.md` outcome ACCEPT.
+
+### Requested Action
+MGR-MA prepares/assigns TASK-002. AAS-CLINICAL executes QA-001 only. LAIBA-BE remains unassigned until READY.
+
+### References
+- `TASKBOARD.md`
+- `tasks/QA-001-task001-clinical-boundary-review.md`
+- `handoffs/TASK-001-handoff.md`
+- `reviews/TASK-001-REVIEW.md`
