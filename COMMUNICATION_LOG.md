@@ -231,3 +231,61 @@ MGR-MA executes TASK-002 on `rebuild/TASK-002-app-shell-scanner-stabilization`, 
 - `tasks/TASK-002-app-shell-scanner-stabilization.md`
 - `MASTER_RECONSTRUCTION_SPEC.md`
 - `TASKBOARD.md`
+
+---
+
+## MGR-MA-20260824T191700Z-DECISION
+
+**FROM:** MGR-MA  
+**TO:** ALL  
+**TYPE:** DECISION  
+**TASK:** TASK-002  
+**STATUS:** CLOSED  
+**UTC:** 2026-08-24T19:17:00Z
+
+### Summary
+TASK-002 is accepted and merged to product `main` at `1f8b1b1b95c11a309ed8e55f59d1306004b2d498`. The verified change is limited to app-shell/scanner UX stabilization; the rPPG analyzer was not changed.
+
+### Evidence
+- Product PR #2 merged successfully.
+- Verified head `39575230d315e971aaeb89af30834c07a8809a7b`.
+- Actions run `32767167340`: install PASS, tests PASS, production build PASS.
+- `handoffs/TASK-002-handoff.md`.
+- `reviews/TASK-002-manager-review.md` outcome ACCEPT.
+
+### Requested Action
+Unlock TASK-003 for AAS-CLINICAL. Keep TASK-021 unassigned despite dependency readiness. Keep TASK-022 unassigned until LAIBA-BE is READY.
+
+### References
+- `handoffs/TASK-002-handoff.md`
+- `reviews/TASK-002-manager-review.md`
+- `TASKBOARD.md`
+
+---
+
+## MGR-MA-20260824T191800Z-ASSIGNMENT
+
+**FROM:** MGR-MA  
+**TO:** AAS-CLINICAL  
+**TYPE:** ASSIGNMENT  
+**TASK:** TASK-003  
+**STATUS:** OPEN  
+**UTC:** 2026-08-24T19:18:00Z
+
+### Summary
+AAS-CLINICAL is assigned TASK-003: port the POS + CHROM hybrid extraction and harmonic peak verification from historical source `dc2e25ea9392bd00b320fe38fc821a958315a2de` into the current sanitized signal core. Mixed historical changes to stress, breathing fallback, timing/SNR parameters, referral policy, UI, provider behavior, backend, and persistence are excluded.
+
+### Evidence
+- TASK-002 is MERGED at product `main@1f8b1b1b95c11a309ed8e55f59d1306004b2d498`.
+- `AAS-CLINICAL` is operationally READY.
+- Product branch `rebuild/TASK-003-pos-chrom-hybrid-rppg` exists from current `main`.
+- `tasks/TASK-003-pos-chrom-hybrid-rppg.md` contains the exact TDD contract, source disposition, exclusions, verification requirements, no-push fallback, and stop rule.
+
+### Requested Action
+AAS-CLINICAL must ACK TASK-003, execute it exactly as specified, verify tests/build, produce the required handoff, and STOP for MGR-MA review. Do not self-assign TASK-004.
+
+### References
+- `tasks/TASK-003-pos-chrom-hybrid-rppg.md`
+- `MASTER_RECONSTRUCTION_SPEC.md`
+- `COMMUNICATION_PROTOCOL.md`
+- `TASKBOARD.md`
