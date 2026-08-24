@@ -19,8 +19,8 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 | Task | Workstream | Owner | Depends on | Status |
 |---|---|---|---|---|
 | TASK-001 Sanitized baseline prototype | Frontend | MGR-MA | — | MERGED |
-| TASK-002 App shell/scanner stabilization | Frontend | MGR-MA | 001 | ASSIGNED |
-| TASK-003 POS/CHROM hybrid rPPG | Clinical | AAS-CLINICAL | 002 | PLANNED |
+| TASK-002 App shell/scanner stabilization | Frontend | MGR-MA | 001 | MERGED |
+| TASK-003 POS/CHROM hybrid rPPG | Clinical | AAS-CLINICAL | 002 | ASSIGNED |
 | TASK-004 Pulse variability/SNR/timing | Clinical | AAS-CLINICAL | 003 | PLANNED |
 | TASK-005 Uncertainty/camera quality | Clinical | AAS-CLINICAL | 004 | PLANNED |
 | TASK-006 rPPG accuracy upgrade | Clinical | AAS-CLINICAL | 005 | PLANNED |
@@ -38,7 +38,7 @@ Authoritative plan: `MASTER_RECONSTRUCTION_SPEC.md`
 | TASK-018 Clinical integrity correction | Clinical | AAS-CLINICAL | 010–017 | PLANNED |
 | TASK-019 Capture reliability/specialized guides | Frontend | MGR-MA | 018 | PLANNED |
 | TASK-020 Algorithm refinement pass | Clinical | AAS-CLINICAL | 019 | PLANNED |
-| TASK-021 Apple Health product redesign | Frontend | MGR-MA | 002 | PLANNED |
+| TASK-021 Apple Health product redesign | Frontend | MGR-MA | 002 | READY |
 | TASK-022 Supabase/Auth foundation | Backend | LAIBA-BE | 001 | READY |
 | TASK-023 Patients/consent/ownership/RLS | Backend | LAIBA-BE | 022 | PLANNED |
 | TASK-024 Transactional screening/referral/audit | Backend | LAIBA-BE | 023 | PLANNED |
@@ -62,10 +62,14 @@ Auxiliary reviews do not unlock reconstruction dependencies and do not authorize
 
 `TASK-001` is MERGED into product `main` at `9258ea86845bee6aef74c24ae929ed7afcc262ac`.
 
-`TASK-002` is ASSIGNED to `MGR-MA`; execution must follow `tasks/TASK-002-app-shell-scanner-stabilization.md` on `rebuild/TASK-002-app-shell-scanner-stabilization`.
+`TASK-002` is MERGED into product `main` at `1f8b1b1b95c11a309ed8e55f59d1306004b2d498`. Verification passed in Actions run `32767167340`.
+
+`TASK-003` is ASSIGNED to `AAS-CLINICAL` and must follow `tasks/TASK-003-pos-chrom-hybrid-rppg.md` on `rebuild/TASK-003-pos-chrom-hybrid-rppg`.
+
+`TASK-021` is dependency-ready but remains unassigned while the manager keeps the reconstruction sequence focused on the clinical signal chain.
 
 `TASK-022` is dependency-ready but must remain unassigned until `LAIBA-BE` completes onboarding and is operationally READY.
 
-`QA-001` remains ASSIGNED to `AAS-CLINICAL` for read-only clinical/safety QA of the TASK-001 implementation commit. It does not block TASK-002.
+`QA-001` remains recorded as previously assigned. It does not change the TASK-003 dependency/ownership decision.
 
 The manager is the only actor allowed to change dependency order or mark a task READY outside these rules.
