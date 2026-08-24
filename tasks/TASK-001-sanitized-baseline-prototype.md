@@ -1,10 +1,12 @@
 # TASK-001 — Sanitized Baseline Prototype
 
-**Status:** READY
+**Status:** ASSIGNED
 
-**Owner:** Agent A — Scanner / Frontend
+**Owner:** `MGR-MA` — Muhammad Ahmad's Central Manager / Orchestrator acting as Scanner / Frontend implementer for this task
 
 **Product repository:** `Ahmad-Ali-Shah/Project-Vytal-`
+
+**Product branch:** `rebuild/TASK-001-sanitized-baseline-prototype`
 
 **Source repository:** `Ahmad-Ali-Shah/Vital`
 
